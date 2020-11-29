@@ -2,6 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {
   Button,
+  Container,
   createMuiTheme,
   makeStyles,
   responsiveFontSizes,
@@ -33,13 +34,15 @@ const App = () => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <Typography className={classes.heading} variant="h1" component="h1">
-          Clicked button
-        </Typography>
-        <Button color="primary">orange</Button>
-        <Button color="primary">green</Button>
-      </div>
+      <Container maxWidth="">
+        <div className="App">
+          <Typography className={classes.heading} variant="h1" component="h1">
+            Clicked button
+          </Typography>
+          <Button color="primary">orange</Button>
+          <Button color="primary">green</Button>
+        </div>
+      </Container>
     </ThemeProvider>
   );
 };
