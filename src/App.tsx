@@ -34,7 +34,7 @@ const App = () => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="">
+      <Container maxWidth="md">
         <div className="App">
           <Typography className={classes.heading} variant="h1" component="h1">
             Clicked button
