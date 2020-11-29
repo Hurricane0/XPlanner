@@ -27,6 +27,8 @@ let theme = createMuiTheme({
   },
 });
 
+theme = responsiveFontSizes(theme);
+
 const App = () => {
   const classes = useStyles();
   return (
