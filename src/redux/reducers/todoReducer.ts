@@ -1,4 +1,4 @@
-const ADD_TODO = 'todo/ADD_TODO';
+import { ADD_TODO } from '../actions/todosActions';
 
 const initialState = {
   todos: [
@@ -33,13 +33,5 @@ const todoReducer = (
 };
 
 //ActionCreators для того, чтобы передавать в качестве аргументов в dispatch
-export const setCurrentProfile = (payload: any) => ({
-  type: SET_CURRENT_PROFILE,
-  payload,
-});
-export const setUserStatus = (payload: any) => ({
-  type: SET_USER_STATUS,
-  payload,
-});
 
 export default todoReducer;
