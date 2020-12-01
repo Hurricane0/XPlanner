@@ -18,7 +18,14 @@ const todoReducer = (
     case ADD_TODO:
       return {
         ...state,
-        profile: action.payload,
+        todos: [
+          ...state.todos,
+          {
+            title: action.payload.title,
+            notes: action.payload.notes,
+            completed: false,
+          },
+        ],
       };
     default:
       return state;
