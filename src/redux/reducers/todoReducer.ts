@@ -1,10 +1,13 @@
-const SET_CURRENT_PROFILE = 'profile/SET_CURRENT_PROFILE';
-const SET_USER_STATUS = 'profile/SET_USER_STATUS';
+const ADD_TODO = 'todo/ADD_TODO';
 
 const initialState = {
-  posts: [],
-  profile: null,
-  userStatus: '',
+  todos: [
+    {
+      title: '',
+      notes: '',
+      completed: false,
+    },
+  ],
 };
 
 const todoReducer = (
@@ -12,15 +15,10 @@ const todoReducer = (
   action: { type: any; payload: any }
 ) => {
   switch (action.type) {
-    case SET_CURRENT_PROFILE:
+    case ADD_TODO:
       return {
         ...state,
         profile: action.payload,
-      };
-    case SET_USER_STATUS:
-      return {
-        ...state,
-        userStatus: action.payload,
       };
     default:
       return state;
