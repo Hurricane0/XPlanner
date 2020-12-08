@@ -4,6 +4,7 @@ import {
   Button,
   Container,
   createMuiTheme,
+  CssBaseline,
   makeStyles,
   responsiveFontSizes,
   ThemeProvider,
@@ -34,15 +35,17 @@ const App = () => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="md">
-        <div className="App">
-          <Typography className={classes.heading} variant="h1" component="h1">
-            Clicked button
-          </Typography>
-          <Button color="primary">orange</Button>
-          <Button color="primary">green</Button>
-        </div>
-      </Container>
+      <CssBaseline>
+        <Container maxWidth="md">
+          <div className="App">
+            <Typography className={classes.heading} variant="h1" component="h1">
+              Clicked button
+            </Typography>
+            <Button color="primary">orange</Button>
+            <Button color="primary">green</Button>
+          </div>
+        </Container>
+      </CssBaseline>
     </ThemeProvider>
   );
 };
