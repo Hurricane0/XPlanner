@@ -7,7 +7,11 @@ import store from './redux/reduxStore';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core';
 
 const theme = createMuiTheme({
-  palette: {},
+  palette: {
+    background: {
+      default: '#000',
+    },
+  },
 });
 
 ReactDOM.render(
